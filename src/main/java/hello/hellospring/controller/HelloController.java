@@ -25,7 +25,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody //http의 body의 문자 내용 직접 반환
+    @ResponseBody
     public String helloString(@RequestParam("name") String name){
         return "hello " + name;
     }
@@ -34,7 +34,7 @@ public class HelloController {
     //json 방식 key-value로 이루어진 구조
     //옛날에는 xml도 썼는데 요즘은 json 쓰는 게 기본
     @GetMapping("hello-api")
-    @ResponseBody
+    @ResponseBody //http의 body의 문자 내용 직접 반환
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
