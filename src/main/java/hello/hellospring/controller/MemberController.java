@@ -25,6 +25,7 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+
     @PostMapping("/members/new")
     public String create(MemberForm form){
         Member member = new Member();
@@ -34,6 +35,9 @@ public class MemberController {
 
         return "redirect:/"; //홈화면으로 보냄
     }
+
+
+
 
     @GetMapping("/members")
     public String list(Model model){
